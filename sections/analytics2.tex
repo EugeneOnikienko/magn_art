@@ -1,0 +1,84 @@
+\newpage
+
+\section{Lagrange description}
+
+The magnitude of the magnetization vector stays constant during the motion. As we have shown, in the case of small deviations form the equilibrium state, using of Cartesian coordinate system is straightforward. However it is inconvenient in the case of arbitrary deviations. The symmetry of the system prompts us to consider of the motion of magnetization vector in the spherical coordinate system with fixed length. In this case, however, it is much simpler to obtain the equations of motions from the Lagrangian principle.
+
+In the case that we considered, the Lagrangian function of the system can be written as following:
+\bea
+\label{eq:Lagrangian}
+\mathcal{L} &=&	\frac{M_0}{\gamma} \sum_{k=0}^1
+	\left[
+		\bra{1 - \cos{\theta_k}}\dot{\phi}_k
+		+ \frac{\omega_{FM}}{2} \cos^2{\theta_k} 
+	\right] \nn \\
+	&-& \frac{M_0}{\gamma} \Delta \omega_\text{int}
+	\left(
+		\cos{\theta_0} \cos{\theta_1}
+		+ \sin{\theta_0}\sin{\theta_1} \cos{\bra{\phi_0 - \phi_1}}
+	\right).
+\eea
+The $k$ index varies between 0 and 1, specifying the appropriate layer.
+
+Here we present two new constants: $\omega_{FM}$ and $\Delta \omega_\text{int}$. Their meaning is straightforward: $\omega_{FM}$ is a ferromagnetic frequency in the absence of external fields and currents; $\Delta \omega_\text{int}$ is an additional term to the frequency which determined by the strength of the interlayer interaction. Matching between these constants and those which were presented in (\ref{eq:LLGS}) and (\ref{eq:free_enegy}) will be given further.
+
+As we deal with non-conservative system, the dissipative function has to be presented:
+\bea
+\label{eq:dissipative_function}
+\mathcal{R} = \frac{M_0}{\gamma} \sum_{k=0}^1
+	\left[
+		\frac{1}{2} \alpha_{G}
+		\left(
+			\dot{\theta}_k^2 + \dot{\phi}_k^2 \sin^2 \theta_k
+		\right) 
+		- \epsilon \sigma I (-1)^k \sin^2\theta_k \dot{\phi}_k
+	\right]
+\eea
+
+The equations of motion are obtained according to the common approach of Lagrangian formalism:
+\be
+\label{eq:Lagrange_equation}
+	\frac{d}{dt}\pderiv{\mathcal{L}}{\dot{q}_j} - \pderiv{\mathcal{L}}{q_j} =
+	-\pderiv{ \mathcal{R}}{\dot{q}_j}
+\ee
+
+By substitution of (\ref{eq:Lagrangian}) and (\ref{eq:dissipative_function}) into (\ref{eq:Lagrange_equation}) the explicit equations of motion is obtained:
+\bea
+\label{eq:equation_of_motion}
+\sin \theta_k \dot{\phi}_k &=&
+	\omega_\text{FM} \sin \theta_k \cos \theta_k
+	-\Delta\omega_\text{int} \sin \theta_k \cos \theta_{k+1}
+	+\Delta\omega_\text{int} \cos\theta_k \sin\theta_{k+1} \cos\Delta\phi
+	+ \alpha_\text{G} \dot{\theta}_k \nn \\
+\dot{\theta}_k &=&
+	(-1)^k
+	\left(
+		\epsilon\sigma I \sin\theta_k
+		+ \Delta\omega_\text{int}\sin\theta_{k+1}\sin\Delta\phi
+	\right)
+	- \alpha_\text{G} \sin\theta_k \dot{\phi}_k.
+\eea
+Here $\Delta\phi$ denotes $\phi_0 - \phi_1$.
+
+This system of for equations ($k = 0, 1$) can be rewritten in more convenient form:
+\bea
+\label{eq:equation_of_motion1}
+(1+\alpha_\text{G}) \dot{\theta}_k &=& (-1)^k
+	\left(
+		\Delta\omega_\text{int} \sin\theta_{k+1} \sin\Delta\phi
+		+ \epsilon \sigma I \sin\theta_k
+	\right)
+	- \alpha_\text{G} \omega_\text{FM} \sin\theta_k \cos\theta_k \nn \\
+	&+& \alpha \Delta\omega_\text{int}
+	\left(
+		\sin\theta_k \cos\theta_{k+1}
+		- \cos\theta_k \sin\theta_{k+1} \cos\Delta\phi
+	\right) \nn \\
+(1+\alpha_\text{G})\sin\theta_0 \sin\theta_1 \dot{\Delta\phi} &=&
+	\bra{\omega_\text{FM} + \Delta\omega_\text{int}}
+		\sin\theta_0 \sin\theta_1 \bra{\cos\theta_0 - \cos\theta_1}
+	
+\eea
+
+
+
